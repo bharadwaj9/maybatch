@@ -1,0 +1,82 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+<parent>
+  <groupId>com.in.gov</groupId>
+  <artifactId>abc</artifactId>
+  <version>1.0-SNAPSHOT</version>
+ <relativePath>../pom.xml</relativePath>
+</parent>
+
+
+  <groupId>com.in.gov</groupId>
+  <artifactId>irctc</artifactId>
+  <version>1.2-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>irctc</name>
+  <url>http://maven.apache.org</url>
+
+   <scm>
+    <connection>scm:svn:http://localhost:90/svn/irctc/branches/r2.17.0/irctc/</connection>
+    <developerConnection>scm:svn:http://localhost:90/svn/irctc/branches/r2.17.0/irctc/</developerConnection>
+    <url>http://localhost:90/svn/</url>
+  </scm>
+  
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+
+  
+   <!-- <repositories>
+    <repository>
+      <id>central</id>
+      <name>artifactory</name>
+      <url>http://localhost:8081/artifactory/irctc</url>
+    </repository>
+  </repositories>
+  -->
+  
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+	
+	<dependency>
+	<groupId>commons-codec</groupId>
+	<artifactId>commons-codec</artifactId>
+
+    </dependency>
+	
+  </dependencies>
+  <build>
+
+    <plugins>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-release-plugin</artifactId>
+        <version>2.5.3</version>
+
+      </plugin>
+
+    </plugins>
+
+  </build>
+  
+  <distributionManagement>
+    <repository>
+        <id>central</id>
+        <name>SONY-PC-releases</name>
+        <url>http://localhost:8081/artifactory/irctc</url>
+    </repository>
+    <snapshotRepository>
+        <id>central</id>
+        <name>SONY-PC-snapshots</name>
+        <url>http://localhost:8081/artifactory/irctc</url>
+    </snapshotRepository>
+</distributionManagement>
+</project>
